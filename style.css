@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-color:green;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+img{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 100px;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: right;
+    align-items: right;
+}
+.nav-links{
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    padding-top: 170px;
+    padding-right: 70px;
+    padding-left: 70px;
+    text-align: center;
+}
