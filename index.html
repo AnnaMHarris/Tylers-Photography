@@ -7,25 +7,153 @@
 
   <body> 
     <section class="header">
-      <img src="tyler.jpg" alt="Tyler">
+      <img src="color-logo.png" id="logo">
       <nav>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
             <li><a href="">Home</a></li>
-            <li><a href="">PhotographyA</a></li>
-            <li><a href="">PhotographyB</a></li>
-            <li><a href="">PhotographyC</a></li>
+            <li><a href="">Brand Work</a></li>
+            <li><a href="">Music</a></li>
+            <li><a href="">Nature</a></li>
+            <li><a href="">Portraits</a></li>
             <li><a href="">Order</a></li>
             <li><a href="">Contact</a></li>
           </ul>
         </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
   <div class="text-box">
     <h1>Meet the Photographer</h1>
     <p>Live, laugh, love</p>
   </div>
     </section>
-   
+    <div class="row">
+      <!--------Brand Work-------->
+      <section class="brandWork" id="column">
+        <h1>Brand Work</h1>
+        <p>Yeah so I do brand work.  It's kinda like bland.  But wth an r.</p>
+        <div class="brandWorkPics">
+          <img src="brandwork1.jpg" alt="brandwork1">
+          <img src="brandwork2.jpg" alt="brandwork2">
+        </div>
+      </section>
+
+      <!--------Music-------->
+      <section class="music" id="column">
+        <h1>Music</h1>
+        <p>Im in a band</p>
+        <div class="music">
+          <img src="music1.jpg" alt="music1">
+          <img src="music2.jpg" alt="music2">
+          <img src="music3.jpg" alt="music3">
+          <img src="music4.jpg" alt="music4">
+          <img src="music5.jpg" alt="music5">
+          <img src="music6.jpg" alt="music6">
+          <img src="music7.jpg" alt="music7">
+          <img src="music8.jpg" alt="music8">
+          <img src="music9.jpg" alt="music9">
+          <img src="music10.jpg" alt="music10">
+          <img src="music11.jpg" alt="music11">
+          <img src="music12.jpg" alt="music12">
+        </div>
+      </section>
+
+      <!--------Nature-------->
+      <section class="Nature" id="column">
+        <h1>Nature</h1>
+        <p>Im like if bob ross was a photographer</p>
+        <div class="nature">
+          <img src="nature1.jpg" alt="nature1">
+          <img src="nature2.jpg" alt="nature2">
+          <img src="nature3.jpg" alt="nature3">
+          <img src="nature4.jpg" alt="nature4">
+          <img src="nature5.jpg" alt="nature5">
+          <img src="nature6.jpg" alt="nature6">
+          <img src="nature7.jpg" alt="nature7">
+          <img src="nature8.jpg" alt="nature8">
+          <img src="nature9.jpg" alt="nature9">
+        </div>
+      </section>
+
+      <!--------Portraits-------->
+      <section class="Portraits" id="column">
+        <h1>Portraits</h1>
+        <p>Do you want to be the next mona lisa</p>
+        <div class="portraits">
+          <img src="portrait1.jpg" alt="portrait1">
+          <img src="portrait2.jpg" alt="portrait2">
+          <img src="portrait3.jpg" alt="portrait3">
+          <img src="portrait4.jpg" alt="portrait4">
+          <img src="portrait5.jpg" alt="portrait5">
+        </div>
+      </section>
+      </div>
+
+      <!-----------Order------------>
+      <section class="Order" id="order">
+        <h1>Order</h1>
+        <form method="GET" action="tnadeau432@gmail.com" enctype="text/plain">
+          <div>Photo Title</div>
+          <input type="text" name="subject" />
+      
+          <div>Name</div>
+          <input name="Name" />
+      
+          <div>E-Mail</div>
+          <input name="E-Mail Address" />
+      
+          <div>Message</div>
+          <textarea name="Message"></textarea>
+      
+          <br/>
+          <input type="submit" value="Send" />
+      
+          <input type="hidden" name="body" />
+      </form>
+      
+      <script>
+         var form = document.getElementsByTagName('form')[0];
+         form.addEventListener('submit',contact,false);
+         function contact(e) {
+            // Prevent Default Form Submission
+            e.preventDefault();
+      
+            var target = e.target || e.srcElement;
+            var i = 0;
+            var message = '';
+      
+            // Loop Through All Input Fields
+            for(i = 0; i < target.length; ++i) {
+               // Check to make sure it's a value. Don't need to include Buttons
+               if(target[i].type != 'text' && target[i].type != 'textarea') {
+                      // Skip to next input since this one doesn't match our rules
+                  continue;
+               }
+      
+               // Add Input Name and value followed by a line break
+               message += target[i].name + ': ' + target[i].value + "\r\n";
+            }
+            // Modify the hidden body input field that is required for the mailto: scheme
+            target.elements["body"].value = message;
+      
+            // Submit the form since we previously stopped it. May cause recursive loop in some browsers? Should research this.
+            this.submit();
+         }
+      </script>
+      </section>
+
+
+<!---------JavaScript for Menu------->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+        navLinks.style.right = "0";
+      }
+      function hideMenu(){
+        navLinks.style.right = "-200px";
+      }
+    </script>
     
   </body>
 </html>

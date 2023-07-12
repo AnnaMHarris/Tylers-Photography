@@ -5,23 +5,24 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-color:green;
+    background-image:image-set(url(background-photography.jpg));
     background-position: center;
     background-size: cover;
     position: relative;
 }
-img{
+#logo{
   border: 1px solid #ddd;
   border-radius: 4px;
+  float: left;
   padding-top: 10px;
   padding-left: 10px;
-  width: 100px;
+  width: 150px;
 }
 nav{
     display: flex;
-    padding: 2% 6%;
+    padding: 5% 6%;
     justify-content: right;
-    align-items: right;
+    align-items: center;
 }
 .nav-links{
     text-align: right;
@@ -32,11 +33,114 @@ nav{
     padding: 8px 12px;
     position: relative;
 }
+.nav-links ul li a{
+    color: #330;
+    text-decoration: none;
+    font-size: 13px;
+}
 .text-box{
     width: 90%;
-    color: #fff;
+    color:#333;
     padding-top: 170px;
     padding-right: 70px;
     padding-left: 70px;
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #330;
+}
+@media(max-width: 700px){
+    .text-boxh1{
+        font-size: 62px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background:#330;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*-------- brandwork -------*/
+
+.brandWork{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.music{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.nature{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.portraits{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color:#333;
+    font-size: 14px;
+    font-weight:300;
+    line-height: 22px;
+    padding: 10px;
+}
+.column {
+    width: 33.33%;
+    padding: 5px;
+    display: inline-block;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: inline-block;
+}
+img{
+    border: 1px solid #ddd;
+    border-radius: 0;
+    padding: 0;
+    width: 150px;
+    display: inline-block;
+}
+.order{
+    padding: 100;
     text-align: center;
 }
