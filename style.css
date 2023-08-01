@@ -43,7 +43,7 @@ nav{
 }
 .text-box{
     width: 90%;
-    color:#333;
+    color:#fff;
     padding-top: 170px;
     padding-right: 70px;
     padding-left: 70px;
@@ -55,7 +55,7 @@ nav{
 .text-box p{
     margin: 10px 0 40px;
     font-size: 14px;
-    color: #330;
+    color: #fff;
 }
 @media(max-width: 800px){
     .text-boxh1{
@@ -91,28 +91,50 @@ nav{
 /*-------- brandwork -------*/
 
 .brandWork{
-    width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
+}
+.brandWork img{
+    margin-left: 20%;
+    margin-right:20%;
+    align-items: center;
+    justify-content: center;
 }
 .music{
-    width: 80%;
-    margin: auto;
     text-align: center;
     padding-top: 100px;
+    display: inline-block;
+}
+.music img{
+    margin-left: 20%;
+    margin-right:20%;
+    align-items: center;
+    justify-content: center;
 }
 .nature{
-    width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
+    display: inline-block;
+}
+.nature img{
+    margin-left: 20%;
+    margin-right:20%;
+    align-items: center;
+    justify-content: center;
 }
 .portraits{
-    width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
+    display: inline-block;
+}
+.portraits img{
+    margin-left: 20%;
+    margin-right:20%;
+    align-items: center;
+    justify-content: center;
 }
 
 h1{
@@ -126,23 +148,14 @@ p{
     line-height: 22px;
     padding: 10px;
 }
-.column {
-    width: 33.33%;
-    padding: 5px;
-    display: inline-block;
-}
-.row::after {
-    content: "";
-    clear: both;
-    display: inline-block;
-}
+
 img{
-    border: 1px solid #ddd;
-    border-radius: 0;
-    padding: 0;
-    width: 150px;
-    display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  width: 550px;
+  display: inline-block;
 }
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 html {
@@ -152,7 +165,7 @@ html {
 }
 
 body {
-  background: #336633
+  background: #5A5A5A;
 }
 
 button {
@@ -179,7 +192,7 @@ textarea {
 
 #container {
   border: solid 3px #474544;
-  max-width: 700px;
+  max-width: 600px;
   margin: 60px auto;
   position: relative;
 }
@@ -197,8 +210,6 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
-
-
 
 .icon_wrapper {
   margin: 50px auto 0;
@@ -259,6 +270,7 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
 select {
   background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
   outline: none;
+  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
 }
