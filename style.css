@@ -11,15 +11,15 @@
     background-size: cover;
     position: relative;
     background-repeat: no-repeat;
-}
 
+}
 #logo{
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  float: left;
-  padding-top: 10px;
-  padding-left: 10px;
-  width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 150px;
 }
 nav{
     display: flex;
@@ -28,6 +28,7 @@ nav{
     align-items: center;
 }
 .nav-links{
+    flex: 1;
     text-align: right;
 }
 .nav-links ul li{
@@ -41,12 +42,25 @@ nav{
     text-decoration: none;
     font-size: 13px;
 }
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #330;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
 .text-box{
     width: 90%;
     color:#fff;
-    padding-top: 170px;
-    padding-right: 70px;
-    padding-left: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 .text-box h1{
@@ -57,8 +71,28 @@ nav{
     font-size: 14px;
     color: #fff;
 }
-@media(max-width: 800px){
-    .text-boxh1{
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #330;
+    background: #330;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
         font-size: 62px;
     }
     .nav-links ul li{
@@ -70,14 +104,15 @@ nav{
         height: 100vh;
         width: 200px;
         top: 0;
-        right: 0;
+        right: -200px;
         text-align: left;
         z-index: 2;
         transition: 1s;
     }
+
     nav .fa{
         display: block;
-        color: #fff;
+        color: #330;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
@@ -90,28 +125,38 @@ nav{
 
 /*-------- brandwork -------*/
 
-.brandWork{
+.brandwork{
     margin: auto;
     text-align: center;
     padding-top: 100px;
 }
-.brandWork img{
-    margin-left: 20%;
-    margin-right:20%;
+.brandwork img{
+    border: 1px solid #ddd;
+    border-radius: 0;
+    width: 50%;
+    min-width: 200px;
     align-items: center;
     justify-content: center;
+    margin-left: 10%;
+    margin-right:10%;
 }
+/*-------- music -------*/
 .music{
     text-align: center;
     padding-top: 100px;
     display: inline-block;
 }
 .music img{
-    margin-left: 20%;
-    margin-right:20%;
+  border: 1px solid #ddd;
+    border-radius: 0;
+    width: 50%;
+    min-width: 200px;
     align-items: center;
     justify-content: center;
+    margin-left: 10%;
+    margin-right:10%;
 }
+/*-------- nature -------*/
 .nature{
     margin: auto;
     text-align: center;
@@ -119,28 +164,41 @@ nav{
     display: inline-block;
 }
 .nature img{
-    margin-left: 20%;
-    margin-right:20%;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    width: 50%;
+    min-width: 200px;
     align-items: center;
     justify-content: center;
+    margin-left: 20%;
+    margin-right:20%;
 }
+
+/*-------- portraits -------*/
 .portraits{
     margin: auto;
     text-align: center;
     padding-top: 100px;
     display: inline-block;
 }
+
 .portraits img{
-    margin-left: 20%;
-    margin-right:20%;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    width: 50%;
+    min-width: 200px;
     align-items: center;
     justify-content: center;
+    margin-left: 20%;
+    margin-right:20%;
 }
+
 
 h1{
     font-size: 36px;
     font-weight: 600;
 }
+
 p{
     color:#333;
     font-size: 14px;
@@ -149,12 +207,7 @@ p{
     padding: 10px;
 }
 
-img{
-  border: 1px solid #ddd;
-  border-radius: 0;
-  width: 550px;
-  display: inline-block;
-}
+
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
@@ -341,13 +394,23 @@ textarea {
     margin: 20px auto;
     width: 95%;
   }
+  
 }
 
 @media screen and (max-width: 480px) {
+  #container {
+    margin: 10px auto;
+    width: 80%;
+  }
+  #logo{
+    width:40%;
+  }
   h1 {
     font-size: 26px;
   }
-  
+  .header{
+    background-image:image-set(url(nature3.jpg));
+  }
   .underline {
     width: 68px;
   }
@@ -358,10 +421,24 @@ textarea {
 }
 
 @media screen and (max-width: 420px) {
-  h1 {
-    font-size: 18px;
+  #container {
+    margin: 0px auto;
+    width: 70%;
   }
-  
+  #logo{
+    width: 30%;
+  }
+  .text-box h1{
+    font-size: 14px;
+    font-weight:400;
+  }
+  .text-box p{
+    font-weight:400;
+  }
+
+  .header{
+    background-image:image-set(url(nature3.jpg));
+  }
   .icon {
     height: 35px;
     width: 35px;
@@ -369,6 +446,12 @@ textarea {
   
   .underline {
     width: 53px;
+  }
+  .brandwork{
+    width: 70%;
+  }
+  .brandwork img{
+    width: 70%;
   }
   
   input[type='text'], [type='email'], select, textarea {
