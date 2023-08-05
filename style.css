@@ -55,7 +55,7 @@ nav{
     width: 100%;
 }
 .text-box{
-    width: 90%;
+    width: 70%;
     color:#fff;
     position: absolute;
     top: 50%;
@@ -68,8 +68,8 @@ nav{
 }
 .text-box p{
     margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
+    font-size: 18px;
+    color: #002800;
 }
 .hero-btn{
     display: inline-block;
@@ -77,7 +77,8 @@ nav{
     color: #fff;
     border: 1px solid #fff;
     padding: 12px 34px;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight:300;
     background: transparent;
     position: relative;
     cursor: pointer;
@@ -91,37 +92,6 @@ nav .fa{
     display: none;
 }
 
-@media(max-width: 700px){
-    .text-box h1{
-        font-size: 62px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: absolute;
-        background:#ffcc99;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-
-    nav .fa{
-        display: block;
-        color: #330;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-
-    }
-    .nav-links ul{
-        padding: 30px;
-    }
-}
 
 /*-------- brandwork -------*/
 
@@ -248,6 +218,7 @@ textarea {
   max-width: 600px;
   margin: 60px auto;
   position: relative;
+  background-color: #ddd;
 }
 
 form {
@@ -264,17 +235,15 @@ h1 {
   text-transform: uppercase;
 }
 
-.icon_wrapper {
+.icon {
   margin: 50px auto 0;
   width: 100%;
 }
 
-.icon {
+#bwlogo {
   display: block;
-  fill: #474544;
-  height: 50px;
   margin: 0 auto;
-  width: 50px;
+  width: 200px;
 }
 
 .email {
@@ -396,6 +365,37 @@ textarea {
   }
   
 }
+@media(max-width: 700px){
+  .text-box h1{
+      font-size: 62px;
+  }
+  .nav-links ul li{
+      display: block;
+  }
+  .nav-links{
+      position: absolute;
+      background:#ffcc99;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+  }
+
+  nav .fa{
+      display: block;
+      color: #330;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+
+  }
+  .nav-links ul{
+      padding: 30px;
+  }
+}
 
 @media screen and (max-width: 480px) {
   #container {
@@ -434,24 +434,19 @@ textarea {
   }
   .text-box p{
     font-weight:400;
+    color:#fff;
+    font-size:11px;
   }
 
   .header{
     background-image:image-set(url(nature3.jpg));
   }
-  .icon {
-    height: 35px;
-    width: 35px;
+  #bwlogo {
+    width: 100px;
   }
   
   .underline {
     width: 53px;
-  }
-  .brandwork{
-    width: 70%;
-  }
-  .brandwork img{
-    width: 70%;
   }
   
   input[type='text'], [type='email'], select, textarea {
