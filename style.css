@@ -92,7 +92,23 @@ nav .fa{
     display: none;
 }
 
+/*-------- weddings -------*/
 
+.weddings{
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.weddings img{
+  border: 1px solid #ddd;
+  border-radius: 0;
+  width: 50%;
+  min-width: 200px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right:10%;
+}
 /*-------- brandwork -------*/
 
 .brandwork{
